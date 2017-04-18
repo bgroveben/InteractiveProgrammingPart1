@@ -110,6 +110,125 @@ print
 
 
 # 3.
+# Compute whether the given time is lunchtime.
+
+###################################################
+# Is lunchtime formula
+# Student should enter function on the next lines.
+
+def is_lunchtime(hour, is_am):
+    """
+    (int, bool) -> bool
+
+    Write a Python function is_lunchtime that takes as input the parameters hour (an integer in the
+    range [1,12]) and is_am (a Boolean 'flag' that represents whether the hour is before noon).
+    The function should return True when the input corresponds to 11am or 12pm and false otherwise.
+
+    Precondition: hour parameter is an integer in the range[1, 12].
+
+    >>> is_lunchtime(11, True)
+    True
+    >>> is_lunchtime(12, False)
+    True
+    >>> is_lunchtime(11, False)
+    False
+    >>> is_lunchtime(12, True)
+    False
+    >>> is_lunchtime(1, False)
+    False
+    """
+    return (hour == 11 and is_am == True) or (hour == 12 and is_am == False)
+
+###################################################
+# Tests
+# Student should not change this code.
+
+def test(hour, is_am):
+	"""Tests the is_lunchtime function."""
+	print hour,
+	if is_am:
+		print "AM",
+	else:
+		print "PM",
+	if is_lunchtime(hour, is_am):
+		print "is lunchtime."
+	else:
+		print "is not lunchtime."
+
+test(11, True)
+test(12, True)
+test(11, False)
+test(12, False)
+test(10, False)
+print
+
+###################################################
+# Expected output
+# Student should look at the following comments and compare to printed output.
+
+#11 AM is lunchtime.
+#12 AM is not lunchtime.
+#11 PM is not lunchtime.
+#12 PM is lunchtime.
+#10 PM is not lunchtime.
+
+
+
+# 4.
+# Compute whether the given year is a leap year.
+
+###################################################
+# Is leapyear formula
+# Student should enter function on the next lines.
+
+def is_leap_year(year):
+    """
+    (int) -> bool
+
+    Write a Python function that takes as input the parameter year and returns True if year (an integer)
+    is a leap year according to the Gregorian calendar and False otherwise.
+    https://en.wikipedia.org/wiki/Leap_year contains a simple algorithmic rule for determining whether a
+    year is a leap year.
+    Your main task will be to translate this rule into Python.
+
+    >>> is_leap_year(2012)
+    True
+    >>> is_leap_year(2013)
+    False
+    >>> is_leap_year(1996)
+    True
+    >>> is_leap_year(1995)
+    False
+    >>> is_leap_year(2100)
+    False
+    """
+    return (year % 4 == 0 and not year % 100 == 0) or (year % 400 == 0)
+
+###################################################
+# Tests
+# Student should not change this code.
+
+def test(year):
+	"""Tests the is_leapyear function."""
+	if is_leap_year(year):
+		print year, "is a leap year."
+	else:
+		print year, "is not a leap year."
+
+test(2000)
+test(1996)
+test(1800)
+test(2013)
+print
+
+###################################################
+# Expected output
+# Student should look at the following comments and compare to printed output.
+
+#2000 is a leap year.
+#1996 is a leap year.
+#1800 is not a leap year.
+#2013 is not a leap year.
 
 
 
