@@ -1,5 +1,6 @@
 ### Functions from Week 1 Quiz 1 ###
-# Continued at #8
+
+import math
 
 def polynomial(x):
     """
@@ -20,6 +21,7 @@ def polynomial(x):
     """
     result = (-5 * x**5) + (69 * x**2) - 47
     return result
+
 
 
 def future_value(present_value, annual_rate, periods_per_year, years):
@@ -52,6 +54,40 @@ def future_value(present_value, annual_rate, periods_per_year, years):
 
 print
 print "$1000 at 2% compounded daily for 3 years yields $", future_value(1000, .02, 365, 3)
+print
+
+
+
+def polygon_area(sides, length):
+    """
+    (int, num) -> num
+
+    Write a function that calculates the area of a regular polygon, given the number of sides
+    and the length of each side.
+    Return a number (not the units) with at least four digits of precision after the decimal point.
+
+    >>> polygon_area(5, 7)
+    84.30339262885938
+    >>> polygon_area(7, 3)
+    32.705211996014306
+    """
+    numerator = sides * (length ** 2)
+    denominator = 4 * math.tan(math.pi / sides )
+    return numerator / denominator
+
+print "The area of a regular polygon with 7 sides of length 3 is " + str(polygon_area(7, 3)) + "."
+print
+
+
+
+# The following code is displayed in the quiz with a number of syntactic errors in it.
+# The following is a corrected version of that code:
+def project_to_distance(point_x, point_y, distance):
+    dist_to_origin = math.sqrt(point_x ** 2 + point_y ** 2)
+    scale = distance / dist_to_origin
+    print point_x * scale, point_y * scale
+
+project_to_distance(2, 7, 4)
 print
 
 
