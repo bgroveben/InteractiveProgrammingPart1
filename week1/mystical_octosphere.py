@@ -27,7 +27,7 @@
 # Let's get started!
 
 # Up here, before everything else, import the random module
-
+import random
 # Type the command to import the random module above this line
 # and make sure it is not indented at all.
 
@@ -59,11 +59,24 @@ def number_to_fortune(number):
     # Use an if...elif...else statement
     # to check each of the numbers between 0 and 7
     # and return the fortune as a string.
-
-
-
-
-    pass # IMPORTANT Delete this line when you are ready to write your code!
+    if number == 0:
+        return "Yes, for sure!"
+    elif number == 1:
+        return "Probably yes."
+    elif number == 2:
+        return "Seems like yes..."
+    elif number == 3:
+        return "Definitely not!"
+    elif number == 4:
+        return "Probably not."
+    elif number == 5:
+        return "I really doubt it..."
+    elif number == 6:
+        return "Not sure, check back later!"
+    elif number == 7:
+        return "I really can't tell."
+    else:
+        return "Invalid input"
 
     # Make sure all your code for the helper function is
     # indented by at least four spaces
@@ -93,37 +106,38 @@ def number_to_fortune(number):
 # Print out a line saying the liquid swirls and a reply comes into view
 # And print what the fortune was
 def mystical_octosphere(question):
+    # pass
     # Fill in your code below
 
     # Print a line including the original
     # question to the console.
-
-
+    print question
+    print
     # Print the line "You shake the mystical octosphere."
-
+    print "You shake the mystical octosphere."
 
     # Use randrange to put a random number between 0 and 7
     # into a variable called answer_number
-
+    answer_number = random.randrange(0,8)
 
     # Use the helper function to translate
     # the number you just randomly selected
     # into a fortune, and store it in a
     # variable called answer_fortune
-
+    answer_fortune = number_to_fortune(answer_number)
 
     # Build suspense by printing a line that says
     # The cloudy liquid swirls, and a reply comes into view...
 
-
+    print "The cloudy liquid swirls, and a reply comes into view..."
     # Print a line that says
     # The mystical octosphere says...
     # and the fortune you put into answer_fortune
-
+    print "The mystical octosphere says...", answer_fortune
 
     # Print a blank line
-
-
+    print
+    print
     # Make sure all your code for the main function
     # is indented by at least four spaces
     # ("At least" means it can be more than four but not less.)
@@ -131,5 +145,6 @@ def mystical_octosphere(question):
 # These lines runs your main function!
 # You can change the questions if you wish.
 # Only yes-or-no style questions will make sense.
+print
 mystical_octosphere("Will I get rich?")
 mystical_octosphere("Are the Cubs going to win the World Series?")
