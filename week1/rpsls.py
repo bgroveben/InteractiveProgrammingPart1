@@ -56,11 +56,40 @@ def name_to_number(name):
 
 
 def number_to_name(number):
-    # delete the following pass statement and fill in your code below
-    pass
+    """
+    (int) -> str
 
+    Convert a number in the range 0 to 4 into its corresponding name as a string.
+
+    >>> number_to_name(0)
+    'rock'
+    >>> number_to_name(1)
+    'Spock'
+    >>> number_to_name(2)
+    'paper'
+    >>> number_to_name(3)
+    'lizard'
+    >>> number_to_name(4)
+    'scissors'
+    >>> number_to_name(-1)
+    'Sorry, that is an invalid number. Please choose a number between 0 and 4.'
+    >>> number_to_name(5)
+    'Sorry, that is an invalid number. Please choose a number between 0 and 4.'
+    """
     # convert number to a name using if/elif/else
     # don't forget to return the result!
+    if number == 0:
+        return "rock"
+    elif number == 1:
+        return "Spock"
+    elif number == 2:
+        return "paper"
+    elif number == 3:
+        return "lizard"
+    elif number == 4:
+        return "scissors"
+    else:
+        return "Sorry, that is an invalid number. Please choose a number between 0 and 4."
 
 
 def rpsls(player_choice):
@@ -96,4 +125,4 @@ rpsls("scissors")
 
 if __name__=="__main__":
     import doctest
-    doctest.testmod()
+    print doctest.testmod()
