@@ -20,11 +20,39 @@
 # helper functions
 
 def name_to_number(name):
-    # delete the following pass statement and fill in your code below
-    pass
+    """
+    (str) -> int
 
+    Convert the string name into a number between 0 and 4 as described in the comments above.
+
+    >>> name_to_number("rock")
+    0
+    >>> name_to_number("Spock")
+    1
+    >>> name_to_number("paper")
+    2
+    >>> name_to_number("lizard")
+    3
+    >>> name_to_number("scissors")
+    4
+    >>> name_to_number("invalid")
+    'Sorry, that input is invalid. Please choose rock, paper, scissors, lizard, or Spock.'
+    """
     # convert name to number using if/elif/else
     # don't forget to return the result!
+    if name == "rock":
+        return 0
+    elif name == "Spock":
+        return 1
+    elif name == "paper":
+        return 2
+    elif name == "lizard":
+        return 3
+    elif name == "scissors":
+        return 4
+    else:
+        return "Sorry, that input is invalid. Please choose rock, paper, scissors, lizard, or Spock."
+
 
 
 def number_to_name(number):
@@ -64,3 +92,8 @@ rpsls("lizard")
 rpsls("scissors")
 
 # always remember to check your completed program against the grading rubric
+
+
+if __name__=="__main__":
+    import doctest
+    doctest.testmod()
