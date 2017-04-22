@@ -17,6 +17,8 @@
 # 3 - lizard
 # 4 - scissors
 
+import random
+
 # helper functions
 
 def name_to_number(name):
@@ -92,37 +94,85 @@ def number_to_name(number):
         return "Sorry, that is an invalid number. Please choose a number between 0 and 4."
 
 
+
 def rpsls(player_choice):
-    # delete the following pass statement and fill in your code below
-    pass
+    """
+    (str) -> NoneType
 
+    This function has three parts.
+    1. Compute the number player_number between 0 and 4 corresponding to the player's choice by calling
+    the helper function name_to_number() using player_choice.
+    2. Generate the computer's 'guess' using a random number and print out an appropriate message for
+    that guess.
+    3. Calculate the difference between the computer's number (guess) and the player's number (guess),
+    determine the winner, and print out the result.
+
+    >>> random.seed(1)
+    >>> rpsls("rock")
+    <BLANKLINE>
+    Player chooses rock
+    Computer chooses rock
+    Player and computer tie!
+    >>> rpsls("Spock")
+    <BLANKLINE>
+    Player chooses Spock
+    Computer chooses scissors
+    Player wins!
+    >>> rpsls("paper")
+    <BLANKLINE>
+    Player chooses paper
+    Computer chooses lizard
+    Computer wins!
+    >>> rpsls("lizard")
+    <BLANKLINE>
+    Player chooses lizard
+    Computer chooses Spock
+    Player wins!
+    >>> rpsls("scissors")
+    <BLANKLINE>
+    Player chooses scissors
+    Computer chooses paper
+    Player wins!
+    """
     # print a blank line to separate consecutive games
-
+    print
     # print out the message for the player's choice
-
+    print "Player chooses", player_choice
     # convert the player's choice to player_number using the function name_to_number()
-
+    player_number = name_to_number(player_choice)
     # compute random guess for comp_number using random.randrange()
-
+    comp_number = random.randrange(0,5)
     # convert comp_number to comp_choice using the function number_to_name()
-
+    comp_choice = number_to_name(comp_number)
     # print out the message for computer's choice
-
+    print "Computer chooses", comp_choice
     # compute difference of comp_number and player_number modulo five
-
+    result = (comp_number - player_number) % 5
     # use if/elif/else to determine winner, print winner message
-
+    if result == 0:
+        print "Player and computer tie!"
+    elif result < 3:
+        print "Computer wins!"
+    elif result < 5:
+        print "Player wins!"
+    else:
+        print "Something went wrong. Please try again."
 
 # test your code - THESE CALLS MUST BE PRESENT IN YOUR SUBMITTED CODE
 rpsls("rock")
+rpsls("rock")
+rpsls("Spock")
 rpsls("Spock")
 rpsls("paper")
+rpsls("paper")
+rpsls("lizard")
 rpsls("lizard")
 rpsls("scissors")
-
+rpsls("scissors")
 # always remember to check your completed program against the grading rubric
 
 
 if __name__=="__main__":
     import doctest
+    print
     print doctest.testmod()

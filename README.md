@@ -8,4 +8,4 @@
 
 #### Codeskulptor won't load demos or files linked from the class in Chrome (I may have enabled security precautions that are the reason), but Firefox seems to work just fine.  
 
-I am in [week 2](https://www.coursera.org/learn/interactive-python-1/home/week/2).
+I am in [week 2](https://www.coursera.org/learn/interactive-python-1/home/week/3).
