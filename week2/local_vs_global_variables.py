@@ -25,7 +25,7 @@ print
 # print
 
 # You can use local variables to (among other things):
-# - Give a descriptive name toa quantity.
+# - Give a descriptive name to a quantity.
 # - Avoid computing something multiple times.
 
 def fahren_to_kelvin(fahren):
