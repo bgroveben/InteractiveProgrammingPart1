@@ -18,7 +18,7 @@ d = path.dirname(__file__) if "__file__" in locals() else os.getcwd()
 
 # Read the whole text.
 # text = open(path.join(d, 'constitution.txt')).read()
-text = open(path.join(d, 'smashing_the_stack.txt')).read()
+text = open(path.join(d, 'code_ch1.txt')).read()
 
 # Generate a word cloud image
 wordcloud = WordCloud().generate(text)
@@ -26,8 +26,8 @@ wordcloud = WordCloud().generate(text)
 # Display the generated image:
 # the matplotlib way:
 import matplotlib.pyplot as plt
-plt.imshow(wordcloud, interpolation='bilinear')
-plt.axis("off")
+# plt.imshow(wordcloud, interpolation='bilinear')
+# plt.axis("off")
 
 # lower max_font_size
 wordcloud = WordCloud(max_font_size=40).generate(text)
