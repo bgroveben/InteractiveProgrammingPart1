@@ -23,7 +23,7 @@ the simulation of quantum physics--which is what I really want to talk
 about, but I'U come to that later. So what kind of simulation do I mean?
 There is, of course, a kind of approximate simulation in which you design
 numerical algorithms for differential equations, and then use the computer
-to compute these algorithms and get an approximate view of what ph2csics
+to compute these algorithms and get an approximate view of what physics
 ought to do. That's an interesting subject, but is not what I want to talk
 about. I want to talk about the possibility that there is to be an exact
 simulation, that the computer will do exactly the same as nature. If this is to
