@@ -18,7 +18,7 @@ d = path.dirname(__file__) if "__file__" in locals() else os.getcwd()
 
 # Read the whole text.
 # text = open(path.join(d, 'constitution.txt')).read()
-text = open(path.join(d, 'mly_book/mly01.txt')).read()
+text = open(path.join(d, 'wordlist.txt')).read()
 
 # Generate a word cloud image
 wordcloud = WordCloud().generate(text)
@@ -30,7 +30,9 @@ import matplotlib.pyplot as plt
 # plt.axis("off")
 
 # lower max_font_size
-wordcloud = WordCloud(max_font_size=40).generate(text)
+# From the matplotlib colormap docs:
+# colormap = ['viridis', 'plasma', 'inferno', 'magma', 'cividis']
+wordcloud = WordCloud(max_font_size=45,background_color="cornsilk",colormap="plasma").generate(text)
 plt.figure()
 plt.imshow(wordcloud, interpolation="bilinear")
 plt.axis("off")
