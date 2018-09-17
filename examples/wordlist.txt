@@ -2,6 +2,7 @@ AMBER
 AMBER
 AMBER
 
+sweet
 brave
 compassionate
 loving
@@ -27,3 +28,9 @@ tidy
 tough
 fair
 attentive
+attractive
+tolerant
+patient
+forgiving
+daring
+vivacious
