@@ -34,3 +34,8 @@ patient
 forgiving
 daring
 vivacious
+fit
+athletic
+toned
+epicurean
+refined
