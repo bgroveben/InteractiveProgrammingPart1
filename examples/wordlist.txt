@@ -39,3 +39,9 @@ athletic
 toned
 epicurean
 refined
+shy
+secure
+independent
+resourceful
+generous
+happy
